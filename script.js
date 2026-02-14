@@ -28,6 +28,8 @@ var mobile = window.isDevice;
 var koef = mobile ? 0.5 : 1;
 var canvas = document.getElementById('heart');
 var ctx = canvas.getContext('2d');
+  ctx.shadowBlur = 25; 
+ctx.shadowColor = "#ff3366";  
 var width = canvas.width = koef * innerWidth;
 var height = canvas.height = koef * innerHeight;
 var rand = Math.random;
