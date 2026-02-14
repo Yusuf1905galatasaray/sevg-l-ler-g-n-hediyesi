@@ -28,9 +28,10 @@ var mobile = window.isDevice;
 var koef = mobile ? 0.5 : 1;
 var canvas = document.getElementById('heart');
 var ctx = canvas.getContext('2d');
-  ctx.shadowBlur = 25; 
-ctx.shadowColor = "#ff3366"; 
-    ctx.lineWidth = 3;
+  // Kalbi daha belirgin ve neon yapmak için:
+ctx.lineWidth = 3; // Çizgileri 3 kat kalınlaştırır
+ctx.shadowBlur = 25; // Etrafına güçlü bir parlama (glow) verir
+ctx.shadowColor = "#ff3366"; // Parlamanın rengini harflerle uyumlu yapar
 var width = canvas.width = koef * innerWidth;
 var height = canvas.height = koef * innerHeight;
 var rand = Math.random;
